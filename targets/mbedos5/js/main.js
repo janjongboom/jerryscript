@@ -13,8 +13,11 @@
  * limitations under the License.
  */
 
-setInterval(function() {
-    blink();
-}, 1000);
+var led = DigitalOut(LED1);
+var theAnswer = TheAnswer();
+
+print("The answer is ", theAnswer.give());
+
+theAnswer.blink42times(led);
 
 print("main.js has finished executing.");

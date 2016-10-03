@@ -22,6 +22,7 @@
 // Provides the base wrapper registration symbol that JSMBED_USE_WRAPPER uses.
 // This means all of the base handlers will be registered.
 #include "jerryscript-mbed-drivers/lib_drivers.h"
+#include "the-answer/TheAnswer-js.h"
 
 #include "jerryscript-mbed-event-loop/EventLoop.h"
 
@@ -41,6 +42,8 @@ int main() {
     // JERRY_USE_MBED_LIBRARY(lwip_interface);
     // JERRY_USE_MBED_LIBRARY(esp8266_interface);
     // JERRY_USE_MBED_LIBRARY(simple_mbed_client);
+
+    JERRY_USE_MBED_LIBRARY(the_answer_library);
 
     jsmbed_js_launch();
 
